@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">App Saúde</string>
+    <string name="descricao_app">O aplicativo App Saúde fornece um local central e seguro para suas informações de saúde e condicionamento físico, para que seja facilmente acessível e sob seu controle.</string>
+    <string name="descricao_info">Confira abaixo as informações sobre seu perfil, você pode editar caso tenha mudado alguma informação.</string>
+    <string name="sobre">Aplicativo desenvolvido para fins didáticos. Um incentivo para você cuidar da sua saúde e colocar em prática tudo o que foi aprendido durante a graduação.</string>
+</resources>

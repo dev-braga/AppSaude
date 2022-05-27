@@ -1,4 +1,4 @@
-package com.example.appsaude
+package com.example.aplicacaoisaque.ui
 
 import android.content.Intent
 import android.content.SharedPreferences
@@ -7,9 +7,7 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.view.View
 import android.widget.RadioButton
-import android.widget.Toast
 import com.example.aplicacaoisaque.R
-import com.example.aplicacaoisaque.TelaInicial
 
 class TelaConfiguracao : AppCompatActivity() {
 
@@ -49,11 +47,11 @@ class TelaConfiguracao : AppCompatActivity() {
         radioSatelite = findViewById(R.id.radio_satelite)
 
         // Função para ler os dados salvos
-        lerDados()
+        readData()
 
     }
 
-    private fun lerDados() {
+    private fun readData() {
 
         val radiogroup1 = sharedP.getInt("settings1", 0)
         val radiogroup2 = sharedP.getInt("settings2", 0)
@@ -105,7 +103,7 @@ class TelaConfiguracao : AppCompatActivity() {
 
     }
 
-    private fun salvarDados(){
+    private fun saveData(){
 
         if( radiokm.isChecked ){
             sharedP.edit().putInt("settings1", 1).apply()
@@ -213,12 +211,13 @@ class TelaConfiguracao : AppCompatActivity() {
 
     fun btn_concluir(view: View){
 
-        salvarDados()
+        saveData()
         startActivity(Intent(applicationContext, TelaInicial::class.java))
     }
 
     override fun onBackPressed() {
         startActivity(Intent(applicationContext, TelaInicial::class.java))
+        finish()
     }
 
 }

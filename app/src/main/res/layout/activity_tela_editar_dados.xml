@@ -6,8 +6,10 @@
     android:layout_height="match_parent">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScroll"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:focusableInTouchMode="true"
         android:orientation="vertical">
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,7 +43,9 @@
                     android:text="Masculino"
                     android:onClick="onRadioButtonClicked"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    android:button="@drawable/background_radiobutton"
+                    />
 
                 <RadioButton
                     android:id="@+id/radio_fem"
@@ -51,99 +55,105 @@
                     android:text="Feminino"
                     android:onClick="onRadioButtonClicked"
                     app:layout_constraintStart_toEndOf="@+id/radio_masc"
-                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                    app:layout_constraintTop_toBottomOf="@+id/textView2"
+                    android:button="@drawable/background_radiobutton"/>
 
             </RadioGroup>
 
-            <TextView
-                android:id="@+id/textView3"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/textInputLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Peso"
+                android:layout_marginEnd="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:helperTextEnabled="true"
+                app:helperTextTextColor="@color/red"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/radio_group" />
+                app:layout_constraintTop_toBottomOf="@+id/radio_group">
 
-            <EditText
-                android:id="@+id/editText_peso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:maxLines="1"
-                android:maxLength="4"
-                android:inputType="numberDecimal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView3"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_peso"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Peso"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:maxLines="1"
+                    android:textStyle="bold" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:id="@+id/textView4"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/textInputLayout3"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Altura"
+                android:layout_marginEnd="16dp"
+                app:helperTextTextColor="@color/red"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText_peso" />
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout">
 
-            <EditText
-                android:id="@+id/editText_altura"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:maxLength="3"
-                android:maxLines="1"
-                android:inputType="numberDecimal"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_altura"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Altura"
+                    android:textStyle="bold"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            <EditText
-                android:id="@+id/editText_data_nasc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:ems="10"
-                android:maxLength="10"
-                android:inputType="text"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5"
-                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
-
-            <TextView
-                android:id="@+id/textView5"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:id="@+id/textInputLayout2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
-                android:text="Data de nascimento"
+                android:layout_marginEnd="16dp"
+                app:helperTextTextColor="@color/red"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText_altura" />
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
 
-            <Button
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/editText_data_nasc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Data de Nascimento"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/royal_blue"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:onClick="readCalendar"
+                    android:inputType="datetime"
+                    android:maxLines="1" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                style="?materialButtonStyle"
                 android:id="@+id/btn_concluir"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="80dp"
                 android:layout_marginEnd="16dp"
-                android:onClick="salvarDados"
+                android:onClick="saveData"
                 android:text="Salvar"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText_data_nasc" />
+                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
 
-            <Button
+            <com.google.android.material.button.MaterialButton
+                style="?materialButtonOutlinedStyle"
                 android:id="@+id/btn_editar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"

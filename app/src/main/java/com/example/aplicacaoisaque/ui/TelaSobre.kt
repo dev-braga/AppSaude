@@ -1,9 +1,10 @@
-package com.example.aplicacaoisaque
+package com.example.aplicacaoisaque.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import com.example.aplicacaoisaque.R
 
 class TelaSobre : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,7 @@ class TelaSobre : AppCompatActivity() {
         return true
     }
     override fun onBackPressed() {
+        finish()
         startActivity(Intent(applicationContext, TelaInicial::class.java))
     }
 }

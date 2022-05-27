@@ -10,19 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicacaoIsaque">
         <activity
-            android:name=".TelaEditarDados"
+            android:name=".ui.TelaEditarDados"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.TelaSobre"
             android:exported="false" />
         <activity
-            android:name=".TelaSobre"
+            android:name=".ui.TelaConfiguracao"
             android:exported="false" />
         <activity
-            android:name=".TelaConfiguracao"
-            android:exported="false" />
-        <activity
-            android:name=".TelaInicial"
+            android:name=".ui.TelaInicial"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

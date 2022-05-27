@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/AppSaude/app/src/main/res/drawable/back_button.xml" value="0.22" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/AppSaude/app/src/main/res/drawable/background_radiobutton.xml" value="0.22" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/AppSaude/app/src/main/res/drawable/fundo_edittext.xml" value="0.22" />
         <entry key="..\:/Users/Pablo/AndroidStudioProjects/AppSaude/app/src/main/res/layout/activity_tela_configuracao.xml" value="0.54921875" />
         <entry key="..\:/Users/Pablo/AndroidStudioProjects/AppSaude/app/src/main/res/layout/activity_tela_editar_dados.xml" value="0.54921875" />
+        <entry key="..\:/Users/Pablo/AndroidStudioProjects/AppSaude/app/src/main/res/layout/activity_tela_inicial.xml" value="0.54921875" />
         <entry key="..\:/Users/Pablo/AndroidStudioProjects/AppSaude/app/src/main/res/layout/activity_tela_sobre.xml" value="0.54921875" />
         <entry key="..\:/Users/Pablo/AndroidStudioProjects/App_Isaque-master/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/Pablo/AndroidStudioProjects/App_Isaque-master/app/src/main/res/layout/activity_tela_configuracao.xml" value="0.5" />

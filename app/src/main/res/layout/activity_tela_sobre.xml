@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TelaSobre">
+    tools:context=".ui.TelaSobre">
 
 
     <TextView
@@ -14,6 +14,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:text="@string/sobre"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
         android:textStyle="bold"
-        android:text="Desenvolvido por Bruno Braga."
+        android:text="Desenvolvido por Isaque Souza."
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
